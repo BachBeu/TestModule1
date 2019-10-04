@@ -10,7 +10,7 @@
     let b = parseFloat(prompt("Nhập điểm văn: "));
     let c = parseFloat(prompt("Nhập điểm tiếng anh: "));
     let diemtrungbinh = (a*2 + b + c*2)/5;
-    if(a && b && c > 10 || a && b && c < 0){
+    if((a || b || c > 10)  && (a || b || c < 0)){
         alert("yêu cầu nhập lai điểm");
     } else if(diemtrungbinh < 5){
         alert("Không đạt");
