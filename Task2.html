@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function display(Number) {
+     if(check_N(Number) == true){
+         document.write(num +  " Là số nguyên tố");
+     }else{
+         document.write(num +  " không phải số nguyên tố");
+     }
+
+    }
+    function check_N(Number) {
+        if(Number<=1){
+            return false;
+        }
+        for (let i = 2; i < Number; i++){
+            if(Number % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+    let num = parseInt(prompt("Nhập vào một số nguyên: "));
+    display(num);
+</script>
+</body>
+</html>
