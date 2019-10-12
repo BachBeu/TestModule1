@@ -6,9 +6,11 @@
 </head>
 <body>
 <script>
-    let a = parseFloat(prompt("Nhập điểm toán: "));
+/*    let a = parseFloat(prompt("Nhập điểm toán: "));
     let b = parseFloat(prompt("Nhập điểm văn: "));
     let c = parseFloat(prompt("Nhập điểm tiếng anh: "));
+
+
     let diemtrungbinh = (a*2 + b + c*2)/5;
     if((a || b || c > 10)  && (a || b || c < 0)){
         alert("yêu cầu nhập lai điểm");
@@ -20,7 +22,31 @@
         alert("Khá");
     }else {
         alert("Tốt");
-    }
+    }*/
+    var a = parseFloat(prompt("Nhập điểm toán: "));
+do{
+    a =  parseFloat(prompt("điểm không phù hợp, nhập lại điểm toán: "));
+}while (a<0||a>10)
+    var b = parseFloat(prompt("Nhập điểm Văn: "));
+do {
+    b = parseFloat(prompt("Điểm không phù hợp, nhập lại điểm văn: "));
+}while (b<0||b>10)
+    var c = parseFloat(prompt("Nhập điểm tiếng anh: "));
+do{
+    c =  parseFloat(prompt("Điểm không phù hợp, nhập lại điểm Anh: "));
+}while (c<0||c>10)
+
+
+var diemtrungbinh = (a*2 + b + c*2)/5;
+if(diemtrungbinh < 5){
+    alert("Không đạt");
+}else if(diemtrungbinh >= 5 && diemtrungbinh < 7.5){
+    alert("Đạt");
+}else if(diemtrungbinh >= 7.6 && diemtrungbinh < 8.5){
+    alert("Khá");
+}else {
+    alert("Tốt");
+}
 </script>
 </body>
 </html>
